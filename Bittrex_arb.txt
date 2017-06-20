@@ -1,0 +1,19 @@
+// Pull the JSON data and parse it
+  var urlnxt =  "https://bittrex.com/api/v1.1/public/getticker?market=BTC-NXT";
+  var responseAPI = UrlFetchApp.fetch(urlnxt);
+  //Logger.log(responseAPI);
+  //var prijsdata = responseAPI.getContentText();
+  var prijsdata = JSON.parse(responseAPI.getContentText());
+  Logger.log(prijsdata);
+  
+  var last = [];
+	Last.push(['lastprice']);
+
+	for(var key in lastprice.Last)
+	Last.push(json.Last[key]);
+	 Logger.log(Last);	
+
+	//askRange = APIPullSheet.getRange(2, 2, Last.length, 2);
+    
+  	//askRange.setValue(Last);
+}
